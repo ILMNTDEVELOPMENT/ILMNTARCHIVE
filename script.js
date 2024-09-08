@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { title: 'X', url: 'https://raw.githubusercontent.com/ILMNTDEVELOPMENT/ILMNTARCHIVE/main/X.mp3' },
         { title: 'enclosure!', url: 'https://raw.githubusercontent.com/ILMNTDEVELOPMENT/ILMNTARCHIVE/main/enclosure!.mp3' },{ title: 'enclosure', url: 'https://raw.githubusercontent.com/ILMNTDEVELOPMENT/ILMNTARCHIVE/main/enclosure!.mp3' },
         { title: 'this bible*', url: 'https://raw.githubusercontent.com/ILMNTDEVELOPMENT/ILMNTARCHIVE/main/this_bible_sxullsquadremix_prod3rdeyeblink__sxullsquad.mp3' }, { title: 'this bible', url: 'https://raw.githubusercontent.com/ILMNTDEVELOPMENT/ILMNTARCHIVE/main/this_bible_sxullsquadremix_prod3rdeyeblink__sxullsquad.mp3' },
+        { title: 'money', url: 'https://raw.githubusercontent.com/ILMNTDEVELOPMENT/ILMNTARCHIVE/main/money_3162022.mp3' },
     ];
 
     const searchButton = document.getElementById('searchButtonSong');
