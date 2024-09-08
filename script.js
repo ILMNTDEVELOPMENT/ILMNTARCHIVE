@@ -38,15 +38,13 @@ document.addEventListener('DOMContentLoaded', function() {
             jsmediatags.read(blob, {
                 onSuccess: function(tag) {
                     console.log('Metadata:', tag);
-                    const { title, artist, picture, comment} = tag.tags;
+                    const { title, artist, picture} = tag.tags;
 
                     // Update the audio player
                     audioPlayer.src = song.url;
 
-                    console.log(comment, title, songTitle)
-
                     // Update song details
-                    songTitle.textContent = (title || 'Unknown Title') + (comment.text === "explicit" ? ' 🅴' : '');
+                    songTitle.textContent = (title || 'Unknown Title')
                     artistName.textContent = artist || 'Unknown Artist';
                     searchBar.value = "";
 
