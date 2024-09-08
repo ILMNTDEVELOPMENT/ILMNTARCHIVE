@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="archive songs/musicpagestyle.css">
+    <script src="https://kit.fontawesome.com/2f6650b8b5.js" crossorigin="anonymous"></script>
+    <link id="favicon" rel="icon" type="image/x-icon" href="favicon.png">
+    <title>ilmnt vault</title>
+</head>
+<body>
+    <div class="topBar">
+        <img class="pageLogoMusic" src="logo.png" alt="Logo">
+        <div class="centerWarning">
+            <h1 class="warning">WARNING</h1>
+            <p class="warningDescription">Extended viewing of ILMNT music may be detrimental to the mind. Consult with a loved one before you're fully consumed.</p>
+        </div>
+    </div>
+    <div class="topBar2">
+        <div>
+            <input id="searchBarSong" class="searchBar" placeholder="Enter song title" autocomplete="off">
+            <button id="searchButtonSong" class="searchButton">Search</button>
+        </div>
+    </div>
+    <div class="songPlayer">
+        <audio id="audioPlayer" src=""></audio>
+        <img id="albumCover" class="albumCover" src="archive songs/placeholdercover.png">
+        <br>
+        <i id = "playButton" class="fa-solid fa-play playButton"></i>
+        <p class="musicInfo" id="songTitle"></p>
+        <p class="musicInfo" id="artistName"></p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jsmediatags/dist/jsmediatags.min.js"></script>
+    <script src="archive songs/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let firstWord = "archive";
+            let secondWord = "music";
+            let firstPic = 'favicon.png';
+            let secondPic = 'favicon2.png';
+            let toggle = true;
+            let faviconToggle = true;
+
+            setInterval(function() {
+                document.title = toggle ? firstWord : secondWord; 
+                toggle = !toggle; 
+            }, 1000);
+
+            setInterval(function() {
+                document.getElementById('favicon').href = faviconToggle ? firstPic : secondPic; 
+                faviconToggle = !faviconToggle; 
+            }, 500);
+            const audioPlayer = document.getElementById('audioPlayer');
+            const playButton = document.getElementById('playButton');
+
+            console.log('Audio Player:', audioPlayer); // Should log the audio player element or null
+            console.log('Play Button:', playButton);   // Should log the play button element or null
+
+            if (audioPlayer && playButton) {
+                playButton.addEventListener('click', function() {
+                    if (audioPlayer.paused) {
+                        audioPlayer.play();
+                        playButton.classList.replace("fa-play", "fa-pause")
+                    } else {
+                        audioPlayer.pause();
+                        playButton.classList.replace("fa-pause", "fa-play")
+                    }
+                });
+        }   else {
+            console.error('Audio player or play button not found');
+            
+            }
+            audioPlayer.addEventListener('ended', function() {
+                playButton.classList.replace("fa-pause", "fa-play")
+            });
+        });
+    </script>
+</body>
+</html>

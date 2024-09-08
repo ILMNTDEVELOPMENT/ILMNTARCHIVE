@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "mainpagestyle.css">
+    <link id = "favicon" rel = "icon" type="image/x-icon" href = "favicon.png">
+    <title>ilmnt vault</title>
+</head>
+<body>
+    <div class = "sideBar">
+        <h1 class = "sideBarHeader">ILMNT ARCHIVE</h1>
+        <p class = "sideBarText">Clothes</p>
+        <p class = "sideBarText">Albums</p>
+        <p class = "sideBarText">Singles</p>
+        <p class = "sideBarText">Beats</p>
+    </div>
+    <image class = "pageLogo" src = "logo.png">
+    <p>Archived fashion and music from the ILMNT collectives.</p>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        let firstWord = "ilmnt";
+        let secondWord = "archive";
+        let firstPic = 'favicon.png';
+        let secondPic = 'favicon2.png';
+        let toggle = true;
+        let faviconToggle = true;
+
+        setInterval(function(){
+            document.title = toggle ? firstWord : secondWord; 
+                toggle = !toggle; 
+        }, 1000);
+
+        setInterval(function(){
+            document.getElementById('favicon').href = faviconToggle ? firstPic : secondPic; 
+                faviconToggle = !faviconToggle; 
+        }, 500);
+    });
+</script>
+</html>
