@@ -182,7 +182,7 @@
         color: rgb(255, 0, 0); 
         font-family: "Poppins", sans-serif;
         font-weight: 700;
-        width: 300px; 
+        width: 200px; 
         height: 20px; 
     }
     
@@ -281,5 +281,11 @@
         border: none !important; 
         font-size: 30px; 
         width: auto; 
+    }
+}
+
+@media (max-width: 350px){
+    .searchBar{
+        width: 150px; 
     }
 }
