@@ -43,8 +43,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Update the audio player
                     audioPlayer.src = song.url;
 
+                    console.log(comment, title, songTitle)
+
                     // Update song details
-                    songTitle.textContent = (title || 'Unknown Title') + (comment == 'explicit' ? ' 🅴' : '');
+                    songTitle.textContent = (title || 'Unknown Title') + (comment.text === "explicit" ? ' 🅴' : '');
                     artistName.textContent = artist || 'Unknown Artist';
                     searchBar.value = "";
 
