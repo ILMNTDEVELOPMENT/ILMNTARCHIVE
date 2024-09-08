@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { title: 'money', url: 'https://raw.githubusercontent.com/ILMNTDEVELOPMENT/ILMNTARCHIVE/main/money_3162022.mp3' },
         { title: 'foreign', url: 'https://raw.githubusercontent.com/ILMNTDEVELOPMENT/ILMNTARCHIVE/main/foreign.mp3' },
         { title: 'dirt', url: 'https://raw.githubusercontent.com/ILMNTDEVELOPMENT/ILMNTARCHIVE/main/dirt.mp3' },
+        { title: 'white/black', url: 'https://raw.githubusercontent.com/ILMNTDEVELOPMENT/ILMNTARCHIVE/main/whiteblack.mp3' },{ title: 'white black', url: 'https://raw.githubusercontent.com/ILMNTDEVELOPMENT/ILMNTARCHIVE/main/whiteblack.mp3' },{ title: 'whiteblack', url: 'https://raw.githubusercontent.com/ILMNTDEVELOPMENT/ILMNTARCHIVE/main/whiteblack.mp3' },
     ];
 
     const searchButton = document.getElementById('searchButtonSong');
